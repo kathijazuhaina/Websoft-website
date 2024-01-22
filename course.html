@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,12 +68,12 @@
     </style>
 
     <title>Courses - WebSoft Institute</title>
+    <script src="course.js"></script>
 </head>
 
 <body>
 
-    <!-- Navbar for Courses page -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="https://www.websoftitservices.com/img/logo.png" alt="WebSoft Institute Logo" class="img-fluid">
@@ -92,19 +94,23 @@
                             Courses
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                            <li><a class="dropdown-item" href="course1.html">Course 1</a></li>
-                            <li><a class="dropdown-item" href="course2.html">Course 2</a></li>
-                            <li><a class="dropdown-item" href="course3.html">Course 3</a></li>
-                            <li><a class="dropdown-item" href="course4.html">Course 4</a></li>
+                            <li><a class="dropdown-item" href="AndroidDevelopment.html">Android App Development</a></li>
+                            <li><a class="dropdown-item" href="DSA.html">Data Structures and Algorithm</a></li>
+                            <li><a class="dropdown-item" href="MERN.html">MERN Full Stack development</a></li>
+                            <li><a class="dropdown-item" href="Webdevelopment.html">Web development</a></li>
                         </ul>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+         <form class="d-flex" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> 
+    </header>
 
     <!-- Courses Content -->
     <div class="container mt-5">

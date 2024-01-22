@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <style>
-        /* Custom styles for all pages */
-
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
@@ -25,7 +24,6 @@
             padding: 0;
         }
 
-        /* Navbar styles */
         .navbar {
             background-color: #ffffff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -44,50 +42,52 @@
             color: #ff4081;
         }
 
-        /* Header styles */
         header {
             background-color: #ff4081;
             color: #ffffff;
             padding: 20px 0;
         }
 
-        header img {
-            max-height: 80px;
+        #carouselExampleCaptions {
+            height: calc(100vh - 56px); /* Subtract navbar height */
         }
 
-        /* Carousel styles */
-        .carousel-inner img {
-            max-height: 400px;
-            object-fit: cover;
+        .carousel-inner {
+            height: 100%;
         }
 
-        /* About Us content styles */
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        .carousel-item {
+            height: 100vh;
         }
 
-        /* Footer styles */
-        footer {
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+       /* footer {
             background-color: #333;
             color: #ffffff;
             padding: 20px 0;
+        } */
+
+        .carousel-caption {
+            top: 0;
+            bottom: unset;
+            transform: translateY(0%);
         }
     </style>
 
+
     <title>WebSoft Institute</title>
-    <script src="path/to/index.js"></script>
-
+    <script src="index.js"></script>
 </head>
-
-
 
 <body>
 
-    <!-- Navbar for Index page -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Header for all pages -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="https://www.websoftitservices.com/img/logo.png" alt="WebSoft Institute Logo" class="img-fluid">
@@ -107,13 +107,16 @@
                         <a class="nav-link" href="course.html">Courses</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
-
+        <form class="d-flex" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </header>
     <!-- Carousel for Index page -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -165,3 +168,4 @@
 </body>
 
 </html>
+
