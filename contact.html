@@ -15,12 +15,12 @@
 
     <style>
         body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
         /* Navbar styles */
         .navbar {
@@ -38,8 +38,8 @@
         }
 
         .navbar-nav .nav-link:hover {
-    color: #1c12de !important;
-}
+            color: #1c12de !important;
+        }
 
         /* Course dropdown styles */
         .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
@@ -60,6 +60,7 @@
             color: #ffffff;
             padding: 20px 0;
         }
+
         .map-area {
             width: 100%;
             height: 465px;
@@ -83,11 +84,24 @@
                 height: 465px;
             }
         }
+
+        .form-map-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 500px;
+        }
+
     </style>
-    <title>Courses - WebSoft Institute</title>
+
+    <title>Contact Us - WebSoft Institute</title>
     <script src="course.js"></script>
-    
 </head>
+
 <body>
 
     <header class="navbar navbar-expand-lg navbar-light bg-light">
@@ -105,9 +119,10 @@
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="about.html">About us</a>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link" href="course.html">Courses</a>
-                        </li>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="course.html">Courses</a>
+                    </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link active" href="contact.html">Contact Us</a>
                     </li>
@@ -119,57 +134,30 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form> 
     </header>
-    
+
     <!-- Contact Form and Map Area Section -->
     <div class="container">
-        <div class="row justify-content-lg-center">
+        <div class="row form-map-container">
             <!-- Contact Form Section -->
             <div class="col-12 col-lg-6">
                 <div class="bg-white border rounded shadow-sm overflow-hidden contact-form">
-                    <form action="#!">
-                        <div class="row gy-3 p-4">
-                            <div class="col-12">
-                                <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                            class="bi bi-envelope" viewBox="0 0 16 16">
-                                            <path
-                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <input type="email" class="form-control" id="email" name="email" value="" required>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                            class="bi bi-telephone" viewBox="0 0 16 16">
-                                            <path
-                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
-                                            </path>
-                                        </svg>
-                                    </span>
-                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-grid">
-                                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </div>
+                    <form id="contactForm" class="p-3">
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" class="form-control" placeholder="Enter Your Name....">
+
+                        <label for="Email">Email</label>
+                        <input type="text" id="Email" class="form-control" placeholder="Enter Your Email...">
+
+                        <label for="Contact">Contact Number</label>
+                        <input type="text" id="Contact" class="form-control" placeholder="Enter Your Contact number...">
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" placeholder="Enter Your Subject...">
+
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="form-control" placeholder="Enter Your Message" style="height: 200px;"></textarea>
+
+                        <input type="button" value="Send" onclick="sendEmail()" class="btn btn-primary">
                     </form>
                 </div>
             </div>
@@ -177,17 +165,43 @@
             <!-- Map Area Section -->
             <div class="col-12 col-lg-6">
                 <div class="map-area">
-                    <iframe allowfullscreen
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991464.9095379382!2d72.55006629374995!3d12.870388099999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4e86392eeb%3A0x1ffc13f5c9300820!2sWebsoft%20IT%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1705916742699!5m2!1sen!2sin"></iframe>
+                    <iframe allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991464.9095379382!2d72.55006629374995!3d12.870388099999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4e86392eeb%3A0x1ffc13f5c9300820!2sWebsoft%20IT%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1705916742699!5m2!1sen!2sin"></iframe>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-hj4yKfN+4l2a4Skkc86agsJ8L81IqrK1sJVhR/6DQtkIbpAF5e5q4uUGebR5tnD" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript and additional scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-hj4yKfN+4l2a4Skkc86agsJ8L81IqrK1sJVhR/6DQtkIbpAF5e5q4uUGebR5tnD"
+        crossorigin="anonymous"></script>
 
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "kathijazuhaina27@gmail.com", 
+                Password: "7C8236CC0B2F681B19EDE458623BD616FBA1", 
+                To: 'kathijazuhaina27@gmail.com', 
+                From: "kathijazuhaina27@gmail.com",
+                Subject: document.getElementById('subject').value,
+                Body: "Name: " + document.getElementById('Name').value +
+                    "<br>Email: " + document.getElementById('Email').value +
+                    "<br>Contact Number: " + document.getElementById('Contact').value +
+                    "<br>Message: " + document.getElementById('message').value,
+            }).then(
+                message => {
+                    if (message === "OK") {
+                        swal("Email sent successfully!", "", "success");
+                    } else {
+                        swal("Error sending email", message, "error");
+                    }
+                }
+            );
+        }
+    </script>
 
 </body>
 

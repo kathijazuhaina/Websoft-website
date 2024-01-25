@@ -1,38 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"  href="style.css">
-</head>
-<body>
-    <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-        <h3> GET IN TOUCH</h3>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Email id" required>
-        <input type="text" id="phone" placeholder="Phone no." required>
-        <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-        <button type="submit">Send</button>
-        </form>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "kathijazuhaina1@gmail.com",
-    Password : "Zuhaina@gmail1",
-    To : 'zuhainailiyaas@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact Form",
-    Body : "And this is the body"
-}).then(
-  message => alert(message)
-);
+    <!-- Required meta tags and stylesheets -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-    </script>
+        .navbar-brand img {
+            max-height: 60px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+    color: #1c12de !important;
+}
+
+        /* Course dropdown styles */
+        .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* About Us content styles */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .map-area {
+            width: 100%;
+            height: 465px;
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .map-area iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (min-width: 768px) {
+            .contact-form {
+                margin-right: 30px;
+            }
+
+            .map-area {
+                width: calc(100% - 30px);
+                height: 465px;
+            }
+        }
+    </style>
+    <title>Courses - WebSoft Institute</title>
+    <script src="course.js"></script>
+    
+</head>
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.websoftitservices.com/img/logo.png" alt="WebSoft Institute Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="about.html">About us</a>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link" href="course.html">Courses</a>
+                        </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> 
+    </header>
+    
+    <!-- Contact Form and Map Area Section -->
+    <div class="container">
+        <div class="row justify-content-lg-center">
+            <!-- Contact Form Section -->
+            <div class="col-12 col-lg-6">
+                <div class="bg-white border rounded shadow-sm overflow-hidden contact-form">
+                    <form action="#!">
+                        <div class="row gy-3 p-4">
+                            <div class="col-12">
+                                <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value="" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                            class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Area Section -->
+            <div class="col-12 col-lg-6">
+                <div class="map-area">
+                    <iframe allowfullscreen
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991464.9095379382!2d72.55006629374995!3d12.870388099999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4e86392eeb%3A0x1ffc13f5c9300820!2sWebsoft%20IT%20Services%20Private%20Limited!5e0!3m2!1sen!2sin!4v1705916742699!5m2!1sen!2sin"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-hj4yKfN+4l2a4Skkc86agsJ8L81IqrK1sJVhR/6DQtkIbpAF5e5q4uUGebR5tnD" crossorigin="anonymous"></script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    document.getElementById("contactForm").onsubmit = function (event) {
+        event.preventDefault(); // Prevents the default form submission
+
+        // Get form values
+        var fullName = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var message = document.getElementById("message").value;
+
+        // Your SMTP settings
+        var smtpSettings = {
+            host: "smtp.elasticemail.com",
+            username: "kathijazuhaina27@gmail.com",
+            password: "4C8236CC0B2F681B19EDE458623BD616FBA1",
+            to: "kathijazuhaina27@gmail.com",
+            from: "kathijazuhaina27@gmail.com",
+            subject: "New Contact Form Submission",
+            body: "Full Name: " + fullName + "\nEmail: " + email + "\nPhone: " + phone + "\nMessage: " + message
+        };
+
+        // Send email using SMTP
+        Email.send(smtpSettings).then(
+            function (message) {
+                // Success callback
+                console.log(message);
+                swal("Success!", "Your message has been sent successfully.", "success");
+            },
+            function (error) {
+                // Error callback
+                console.error(error);
+                swal("Error!", "Failed to send the message. Please try again later.", "error");
+            }
+        );
+    };
+</script>
+
 </body>
-</html> 
