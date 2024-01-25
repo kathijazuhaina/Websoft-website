@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,20 +41,12 @@
         }
 
         .navbar-nav .nav-link:hover {
-    color: #1c12de !important;
-}
+            color: #1c12de !important;
+        }
 
         /* Course dropdown styles */
         .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
             display: block;
-        }
-
-        /* About Us content styles */
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer styles */
@@ -65,10 +55,27 @@
             color: #ffffff;
             padding: 20px 0;
         }
+
+        /* Carousel styles */
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Content styles */
+        .content {
+            padding: 30px;
+            text-align: left;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+
     </style>
 
     <title>Courses - WebSoft Institute</title>
-    <script src="course.js"></script>
 </head>
 
 <body>
@@ -106,17 +113,41 @@
                 </ul>
             </div>
         </div>
-         <form class="d-flex" id="searchForm">
+        <!--search bar-->
+        <form class="d-flex" id="searchForm">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
             <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> 
+        </form>
     </header>
 
-    <!-- Courses Content -->
     <div class="container mt-5">
-        <h2 class="text-center">Our Courses</h2>
-        <p class="text-center">Explore our range of courses designed to enhance your skills in web development and programming.</p>
-        <!-- Add more content -->
+        <div class="row align-items-center">
+            <!-- Content -->
+            <div class="col-md-6">
+                <div class="content">
+                    <h2>Our Courses</h2>
+                    <p>Explore our range of courses designed to enhance your skills in web development and programming.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero non vehicula. Fusce venenatis consequat massa a varius. Integer eget viverra mi. Nullam vitae ex a eros efficitur lacinia. Nullam at dolor in ligula volutpat placerat. Proin vel dui eget sem tristique placerat.</p>
+                    <p>Aliquam erat volutpat. Phasellus volutpat augue ut nisi tempus, eget aliquet mi maximus. Quisque nec libero risus. Nullam laoreet, libero quis blandit venenatis, massa purus hendrerit lacus, nec euismod orci quam a eros. Sed nec est vel nulla tristique vehicula. Fusce mattis purus id odio lacinia, sed varius nisl lobortis.</p>
+                </div>
+            </div>
+            <!-- Carousel -->
+            <div class="col-md-6">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://www.simpleimageresizer.com/_uploads/photos/27cb30f2/1_fgMMAFK0S_vhp3l9PkxsxA_1_626x419.png" class="d-block w-100" alt="First Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg" class="d-block w-100" alt="Second Slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" class="d-block w-100" alt="Third Slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

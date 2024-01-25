@@ -31,7 +31,7 @@ header {
 }
 
 #carouselExampleCaptions {
-    height: calc(100vh - 56px); /* Subtract navbar height */
+    height: calc(100vh - 56px); 
 }
 
 .carousel-inner {
@@ -47,12 +47,6 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
-
-/* footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px 0;
-} */
 
 .carousel-caption {
     top: 0;
