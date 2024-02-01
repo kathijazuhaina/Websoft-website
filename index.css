@@ -12,8 +12,9 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-nav .nav-link {
-    color: white !important;
+    color: navy !important;
 }
+
 
 
 .navbar-brand img {
@@ -27,22 +28,23 @@ body {
 
 .navbar-nav .nav-link.active {
     text-decoration: underline;
-    text-decoration-color: #1c12de !important;
-    color: blue !important;
+   /* text-decoration-color: white !important;
+    color: white !important; */
 } 
 
 
 
 .navbar-nav .nav-link:hover {
-color: #1c12de !important;
+color: white !important;
 }
 
 header {
     background: #0f0c29;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right,  #D6E4FF, #A9D5E5);
+     background: linear-gradient(to right,  #D6E4FF, #A9D5E5); 
 }
+
 
 #carouselExampleCaptions {
     height: calc(100vh - 56px); 
@@ -75,16 +77,16 @@ header {
 
 /* Custom CSS for styling search button */
 .navbar .btn.btn-outline-success {
-    color: blue; /* Blue color */
-    border-color: blue; /* Blue color */
+    color: navy; /* Blue color */
+    border-color: navy; /* Blue color */
     background-color: transparent; /* Transparent background */
 }
 
 /* Custom CSS to style search button when clicked */
 .navbar .btn.btn-outline-success:active {
     color: #fff; /* White color for text */
-    background-color: blue; /* Blue color */
-    border-color: blue; /* Blue color */
+    background-color: navy; /* Blue color */
+    border-color: navy; /* Blue color */
 }
 
 
