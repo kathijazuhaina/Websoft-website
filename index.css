@@ -1,14 +1,12 @@
 /*Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+     /*background-color: #f4f4f4;
+       color: #333; */
     margin: 0;
     padding: 0;
 }
 /* Sets the font family to 'Poppins' with a fallback to the default sans-serif font.
-Sets the background color to a light gray (#f4f4f4).
-Sets the text color to a dark gray (#333).
 Resets the margin and padding of the body to 0.
 */
 
@@ -207,7 +205,7 @@ It removes the default list-style (bullet points), sets padding to 0, and displa
 .footer-links li {
     margin-right: 20px; 
 }
-/*his targets list items within elements with the class .footer-links.
+/*this targets list items within elements with the class .footer-links.
 It adds a right margin of 20 pixels to each list item, likely to create spacing between the individual links in the footer. */
 
 
