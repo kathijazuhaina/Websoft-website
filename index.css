@@ -1,4 +1,4 @@
-
+/*Body Styling */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
@@ -6,74 +6,121 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Sets the font family to 'Poppins' with a fallback to the default sans-serif font.
+Sets the background color to a light gray (#f4f4f4).
+Sets the text color to a dark gray (#333).
+Resets the margin and padding of the body to 0.
+*/
 
+
+/* Navbar Styling */
 .navbar {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+/*Sets the background color of the navbar to white (#ffffff).
+Applies a box shadow to the navbar to give it a subtle shadow effect
+*/
+
+
+/*Navbar Links Styling*/
 .navbar-light .navbar-nav .nav-link {
     color: navy !important;
 }
+/*Sets the color of navbar links to navy blue.
+The !important declaration ensures that this style takes precedence over other styles.*/
 
 
-
+/*Navbar Brand Image Styling*/
 .navbar-brand img {
     max-height: 60px;
 }
+/*Sets the maximum height of the brand image to 60 pixels.*/
+
 
 .navbar-nav .nav-link {
     color: #333;
     transition: color 0.3s ease-in-out;
 }
+/*This targets the links within the navigation bar (navbar-nav) with the class .nav-link.
+It sets the default color of these links to #333, which is a shade of dark gray.
+The transition property adds a smooth color transition effect to the links over a duration of 0.3s with an easing function of ease-in-out. This means the color change will occur gradually, creating a smooth visual effect.*/
+
 
 .navbar-nav .nav-link.active {
     text-decoration: underline;
    /* text-decoration-color: white !important;
     color: white !important; */
 } 
+/* This targets the active link within the navigation bar (navbar-nav) with the class .nav-link.
+It adds an underline to the active link using the text-decoration property. This visually distinguishes the active link from others.*/
 
 
-
+/*Navbar Link Hover Styling*/
 .navbar-nav .nav-link:hover {
 color: white !important;
 }
+/* Changes the color of navbar links to white when hovered over.
+Uses !important to ensure this style overrides other styles.*/
 
+/* Header Styling*/
 header {
     background: #0f0c29;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
-     background: linear-gradient(to right,  #D6E4FF, #A9D5E5); 
-}
+    background: linear-gradient(to right,  #D6E4FF, #A9D5E5); 
+} 
+/* Sets the background color of the header to a linear gradient from light blue (#D6E4FF) to a darker blue (#A9D5E5).
+Applies padding of 20 pixels at the top and bottom of the header.*/
 
 
 #carouselExampleCaptions {
     height: calc(100vh - 56px); 
 }
+/*This targets an element with the ID carouselExampleCaptions.
+It sets the height of this element to be the full viewport height minus 56 pixels. This likely adjusts the height of a carousel with captions, ensuring it fits within the viewport. */
+
 
 .carousel-inner {
     height: 100%;
 }
+/*This targets an element with the class carousel-inner, which likely represents the inner container of a carousel.
+It sets the height of this element to be 100%, likely to ensure that the carousel items fill the entire height of the carousel container. */
+
 
 .carousel-item {
     height: 100vh;
 }
+/*This targets elements with the class carousel-item, which are individual items within the carousel.
+It sets the height of each carousel item to be the full viewport height (100vh), ensuring each item fills the entire viewport vertically.*/
+
 
 .carousel-control-prev,
 .carousel-control-next {
     top: 50%;
     transform: translateY(-50%);
 }
+/* These styles target the previous and next carousel control buttons.
+They vertically center the control buttons within their parent container by setting the top position to 50% and using transform to vertically translate them by -50% of their own height.*/
+
 
 .carousel-caption {
     top: 0;
     bottom: unset;
     transform: translateY(0%);
 }
+/*This targets elements with the class carousel-caption, which typically contain captions for carousel items.
+It adjusts the positioning of the carousel captions to be aligned at the top of the carousel items.*/
+
 
 /* Custom CSS for underlining active page link */
 .navbar-nav .nav-link.active {
     text-decoration: underline;
 }
+/*This targets active links (<a> elements with the class .nav-link) within the navbar (<ul> element with the class .navbar-nav).
+It adds an underline decoration to the active link, typically used to visually indicate the current page or active state. */
+
+
 
 /* Custom CSS for styling search button */
 .navbar .btn.btn-outline-success {
@@ -81,6 +128,9 @@ header {
     border-color: navy; /* Blue color */
     background-color: transparent; /* Transparent background */
 }
+/*This targets buttons with the class .btn.btn-outline-success within the navbar (<div> element with the class .navbar).
+It styles the button with blue text and border color (navy) and a transparent background, likely creating a button with blue outline. */
+
 
 /* Custom CSS to style search button when clicked */
 .navbar .btn.btn-outline-success:active {
@@ -88,7 +138,100 @@ header {
     background-color: navy; /* Blue color */
     border-color: navy; /* Blue color */
 }
+/*This targets the same buttons as the previous rule but applies when they are in the active state (clicked).
+It changes the text color to white, the background color to navy blue, and the border color to navy blue when the button is clicked.*/
 
+
+.text-large {
+    font-size: 50px; 
+    font-family: Verdana;
+    color: #B2FFFF;
+}
+/*This targets elements with the class .text-large.
+It sets the font size to 50 pixels, uses the Verdana font family, and sets the text color to a light blue (#B2FFFF).*/
+
+
+.custom-container {
+    background-color: #093252;
+    color: #093252;
+    padding: 20px;
+}
+/*This targets elements with the class .custom-container.
+It sets the background color and text color to a dark blue (#093252) and adds padding of 20 pixels to the container.*/
+
+
+.blue-background {
+    background-color: #093252;
+    padding: 20px 0; 
+}
+/*This targets elements with the class .blue-background.
+It sets the background color to a dark blue (#093252) and adds padding of 20 pixels to the top and bottom of the container (0 pixels to the left and right). */
+
+
+footer {
+    margin: 0;
+    padding: 0;
+    background: #0f0c29;
+    background: linear-gradient(to right, #D6E4FF, #A9D5E5);
+    border-top: 2px solid #FFFFFF;
+}
+/*This targets <footer> elements.
+It sets the margin and padding to 0, applies a linear gradient background from light blue (#D6E4FF) to a darker blue (#A9D5E5), and adds a white border at the top with a thickness of 2 pixels. */
+
+
+footer .container {
+    padding: 0;
+}
+/*This targets the containers within the footer.
+It sets the padding to 0, likely removing any default padding to ensure precise layout control within the footer. */
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* This targets elements with the class .footer-content.
+It sets the display to flex, allowing flexible layouts, with content aligned to the start and end of the container, and centered vertically.*/
+
+
+.footer-links {
+    list-style: none; 
+    padding: 0; 
+    display: flex;
+}
+/*This targets elements with the class .footer-links, likely representing a list of links in the footer.
+It removes the default list-style (bullet points), sets padding to 0, and displays the list items as a flex container. */
+
+
+.footer-links li {
+    margin-right: 20px; 
+}
+/*his targets list items within elements with the class .footer-links.
+It adds a right margin of 20 pixels to each list item, likely to create spacing between the individual links in the footer. */
+
+
+.footer-social {
+    font-size: 1.5rem; 
+}
+/* This targets elements with the class .footer-social, likely representing social media icons or links in the footer.
+It sets the font size to 1.5 times the default font size, making the social media icons or links larger for better visibility.*/
+
+
+.tilt-effect {
+animation: tiltAnimation 1s alternate infinite;
+transform-origin: center;
+}
+
+@keyframes tiltAnimation {
+0% { transform: scale(1) rotate(-5deg); }
+50% { transform: scale(1.05) rotate(5deg); }
+100% { transform: scale(1) rotate(-5deg); }
+}
+/*This defines a CSS animation called tiltAnimation and applies it to elements with the class .tilt-effect.
+The animation makes the elements tilt back and forth, starting from -5 degrees rotation, increasing to 5 degrees at the midpoint, and then returning to -5 degrees.
+The animation lasts for 1 second, alternates direction, and repeats infinitely.
+transform-origin: center; sets the center of the element as the point around which the rotation occurs. */
 
 
 

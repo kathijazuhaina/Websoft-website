@@ -41,14 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
             dataList.appendChild(option);
         });
     });
-    function toggleCourseMenu() {
-        var courseMenu = document.getElementById("courseMenu");
-        if (courseMenu.style.display === "block") {
-            courseMenu.style.display = "none";
-        } else {
-            courseMenu.style.display = "block";
-        }
-    }
 
     // Add event listener for form submission
     searchForm.addEventListener('submit', function (event) {
@@ -67,5 +59,20 @@ document.addEventListener('DOMContentLoaded', function () {
             // Handle no match (e.g., show an alert)
             alert('No matching course found.');
         }
+    });
+
+    // Get the logo element
+    const logo = document.querySelector('.navbar-brand');
+
+    // Add event listener for mouseover event
+    logo.addEventListener('mouseover', () => {
+        // Add the tilt-effect class when mouse is over the logo
+        logo.classList.add('tilt-effect');
+    });
+
+    // Add event listener for mouseout event
+    logo.addEventListener('mouseout', () => {
+        // Remove the tilt-effect class when mouse is out of the logo
+        logo.classList.remove('tilt-effect');
     });
 });
