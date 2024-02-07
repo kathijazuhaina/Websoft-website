@@ -23,10 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const dataList = document.createElement('datalist');
     dataList.id = 'courseOptions';
 
+
     // These lines set the 'list' attribute of the search input to 'courseOptions' and 
     //append the datalist element to the parent node of the search input.
     searchInput.setAttribute('list', 'courseOptions');
     searchInput.parentNode.appendChild(dataList);
+
 
     //This event listener triggers whenever there is an input change in the search input field.
     searchInput.addEventListener('input', function () {
@@ -48,14 +50,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+
     // This event listener triggers when the search form is submitted.
     searchForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+        event.preventDefault(); // Prevent the default form submission behavior, handle the search without reloading the page
 
         // Get the search query This line retrieves the search query entered by the user.
         const query = searchInput.value.toLowerCase();
 
-        // This code finds a course from the courses array that matches the search query.
+        // finds a course from the courses array that matches the search query.
         const matchedCourse = courses.find(course => course.name.toLowerCase().includes(query));
 
         // If a match is found, redirect to the course page
@@ -66,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('No matching course found.');
         }
     });
+
 
     // Get the logo element
     const logo = document.querySelector('.navbar-brand');
@@ -84,39 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* DOMContentLoaded Event Listener:
 
-The JavaScript code begins by adding an event listener to the DOMContentLoaded event. This event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
-Inside this event listener function, the entire JavaScript code is executed once the DOM content is ready.
-Courses Data Array:
 
-The courses array contains objects representing different courses offered by the institute. Each object has two properties: name (the name of the course) and url (the URL of the course page).
-Search Form and Input Elements:
 
-The JavaScript code retrieves references to the search form and input elements in the HTML document using their respective IDs (searchForm and searchInput).
-Clearing Search Input:
 
-The code sets the value of the search input field to an empty string when the page loads.
-Creating Datalist Element:
 
-A new datalist element is dynamically created in the JavaScript code with the ID courseOptions.
-Appending Datalist to Search Input:
 
-The newly created datalist element is appended to the search input field, allowing it to serve as a list of options for the input field.
-Event Listener for Input Changes:
 
-An event listener is added to the search input field to detect changes in its value.
-When the user types in the input field, this event listener triggers a function that dynamically filters the courses based on the input value and updates the list of options in the datalist accordingly.
-Event Listener for Form Submission:
-
-Another event listener is added to the search form to handle form submission.
-When the user submits the form (e.g., by pressing Enter or clicking a search button), this event listener triggers a function that prevents the default form submission behavior.
-The function then retrieves the search query entered by the user, searches for a matching course in the courses array, and redirects the user to the corresponding course page if a match is found.
-If no matching course is found, an alert is displayed to notify the user.
-Logo Element and Mouse Events:
-
-The JavaScript code also retrieves a reference to the logo element with the class navbar-brand.
-Event listeners are added to the logo element to handle mouseover and mouseout events.
-When the mouse is hovered over the logo, a CSS class tilt-effect is added to apply a visual effect (e.g., tilt effect).
-When the mouse moves out of the logo, the tilt-effect class is removed.
-*/
+  
+ 
