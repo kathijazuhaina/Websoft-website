@@ -10,15 +10,21 @@ body {
 Resets the margin and padding of the body to 0.
 */
 
-
 /* Navbar Styling */
 .navbar {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 /*Sets the background color of the navbar to white (#ffffff).
 Applies a box shadow to the navbar to give it a subtle shadow effect
 */
+
+#topbar {
+    background: linear-gradient(to right, #D6E4FF, #A9D5E5);  /*Updated background color to match header */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
 
 
 /*Navbar Links Styling*/
@@ -61,12 +67,14 @@ color: white !important;
 /* Changes the color of navbar links to white when hovered over.
 Uses !important to ensure this style overrides other styles.*/
 
+
 /* Header Styling*/
 header {
     background: #0f0c29;
     padding: 20px 0;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to right,  #D6E4FF, #A9D5E5); 
+    /*box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
 } 
 /* Sets the background color of the header to a linear gradient from light blue (#D6E4FF) to a darker blue (#A9D5E5).
 Applies padding of 20 pixels at the top and bottom of the header.*/
@@ -119,7 +127,6 @@ It adjusts the positioning of the carousel captions to be aligned at the top of 
 It adds an underline decoration to the active link, typically used to visually indicate the current page or active state. */
 
 
-
 /* Custom CSS for styling search button */
 .navbar .btn.btn-outline-success {
     color: navy; /* Blue color */
@@ -150,8 +157,8 @@ It sets the font size to 50 pixels, uses the Verdana font family, and sets the t
 
 
 .custom-container {
-    background-color: #093252;
-    color: #093252;
+    background-color:#A9D5E5;
+    color:#093252;
     padding: 20px;
 }
 /*This targets elements with the class .custom-container.
@@ -159,7 +166,8 @@ It sets the background color and text color to a dark blue (#093252) and adds pa
 
 
 .blue-background {
-    background-color: #093252;
+   /* background-color: #093252; */
+    background-color:#A9D5E5 ;
     padding: 20px 0; 
 }
 /*This targets elements with the class .blue-background.
@@ -230,6 +238,103 @@ transform-origin: center;
 The animation makes the elements tilt back and forth, starting from -5 degrees rotation, increasing to 5 degrees at the midpoint, and then returning to -5 degrees.
 The animation lasts for 1 second, alternates direction, and repeats infinitely.
 transform-origin: center; sets the center of the element as the point around which the rotation occurs. */
+
+.Courses {
+    padding: 10px 0;
+  } 
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 20px; /* Adjusted margin-bottom */
+  }
+  
+  .section-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .section-title p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .nav-tabs {
+    border-bottom: none;
+  }
+  
+  .nav-tabs .nav-item {
+    margin-bottom: 20px;
+  }
+  
+  .nav-tabs .nav-link {
+    font-size: 20px;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .tab-content {
+    padding: 20px 0;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+  
+  .tab-pane h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tab-pane p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+  
+  .tab-pane img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (min-width: 992px) {
+    .nav-tabs .nav-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .Courses, .section-title h2, .section-title p, .nav-link, .tab-pane h3, .tab-pane p {
+    color: white;
+  }
+
+
+/* Set text color to blue for active tabs */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
+    color: #007bff; /* Set text color to blue */
+}
+
+/* Set text color to white for inactive tabs */
+.nav-tabs .nav-link {
+    color: white; /* Set default text color to white */
+}
+
+
+  
+  
 
 
 

@@ -2,6 +2,8 @@
 //page has been fully loaded and parsed.
 document.addEventListener('DOMContentLoaded', function () {
 
+
+
     //This is an array of objects representing different courses, where each object contains the name of
     // the course and its corresponding URL.
     const courses = [

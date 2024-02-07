@@ -15,53 +15,34 @@
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <style>
-        /* Custom styles for all pages */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #7ac3df;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Navbar styles */
-        .navbar {
-            background-color: #ffffff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar-brand img {
-            max-height: 60px;
-        }
-
-        .navbar-nav .nav-link {
-            color: #333;
-            transition: color 0.3s ease-in-out;
-        }
-
-         .navbar-nav .nav-link:hover {
-    color: #1c12de !important;
-        }
-        /* About Us content styles */
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        }
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #ffffff;
-            padding: 20px 0;
-        }
-    </style>
+  <link rel="stylesheet" href="index.css">
 
     <title>About Us - WebSoft Institute</title>
     <script src="index.js"></script>
 </head>
 <body>
+
+     <!--Top Bar-->
+     <div id="topbar" class="d-flex align-items-center shadow-sm">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-auto">
+                    <i class="fa-solid fa-envelope me-2"></i>
+                    <a href="mailto:contact@example.com">websoft@gmail.com</a>
+                </div>
+                <div class="col-lg-auto">
+                    <i class="fa-solid fa-mobile me-2"></i>
+                    <span>+91 9654327896</span>
+                </div>
+                <div class="col-lg-auto d-none d-lg-flex social-links align-items-center">
+                    <a href="#" class="text-navy me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-navy me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-navy me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-navy me-3"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> 
 
     <!-- Header for all pages -->
     <header class="navbar navbar-expand-lg navbar-light bg-light">
@@ -110,11 +91,58 @@
     <!-- Add more content -->
 </div>
 
+ <!--Footer section start-->
+    <!--`class="text-white p-3"` (These are CSS classes applied to the footer element) `text-white` sets the text color to white, and `p-3` adds padding of 3 units -->
+    <footer class="text-white p-3" style="font-family: 'Poppins', sans-serif; background: #0f0c29; background: linear-gradient(to right,  #D6E4FF, #A9D5E5); ">
+        <!--This class isused in Bootstrap to create a responsive container for content-->
+        <div class="container">
+            <!--Within the `container`, there's a `div` element with the class `row`. This class  is used to create a horizontal grouping of columns.-->  
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="mt-2" style="text-align: center; color: navy;">Company Address</h4>
+                    <p style="text-align: center; color: navy;">WEBSOFT IT SERVICES PVT. LTD. <br>
+                        2nd Floor, U.R Tower, <br>
+                        Near City Centre Mall, <br>
+                        K.S Rao Road Mangaluru- 575001</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled text-center" style="color: navy;"> <!-- Added text-center class here -->
+                        <h4 class="mt-2" style="color: navy;">Quick Links</h4>
+                        <!-- <li class="fw-bold my-2">Partnership</li> -->
+                        <li><a href="about.html" class="text-decoration-none" style="color: navy;">About us</a></li>
+                        <li><a href="course.html" class="text-decoration-none" style="color: navy;">Courses</a></li>
+                        <li><a href="contact.html" class="text-decoration-none" style="color: navy;">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="mt-2" style="text-align: center; color: navy;">Contact Us</h4>
+                    <div style="text-align: center;">
+                        <a href="#" class="text-navy me-3"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="text-navy me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-navy me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-navy me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+         
+            <!--horizontal rule start-->
+            <hr style="border-top: 1.1px solid navy;">
+            
+            <div class="row">
+                <div class="col-md-12 text-center pt-2" style="color: navy;">
+                    <p>&copy; Copyright 2024 - All Rights Reserved. Design by <a href="#" class="text-navy">WebSoft</a></p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
 <!-- Optional JavaScript; choose one of the two! -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!-- Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
 
+<script src="https://kit.fontawesome.com/3bc68bf72c.js" crossorigin="anonymous"></script>
 </body>
 </html>
