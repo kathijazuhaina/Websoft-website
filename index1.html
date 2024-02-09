@@ -128,11 +128,12 @@
 <!-- Carousel -->
 <!--This div element represents the entire carousel.-->
 <!--id attribute - "carouselExampleCaptions", which is used as a target for navigation. class "carousel" which is a Bootstrap class indicating that it's a carousel component. data-bs-ride attribute is set to "carousel" to enable automatic cycling through slides. The data-bs-interval attribute is set to "2500" to specify the interval between slide transitions in milliseconds (2.5 seconds).-->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" style="position: relative;">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
  
     <!-- Indicators -->
     <!--This div element contains the indicators, small horizontal buttons that represent each slide in the carousel.-->
     <div class="carousel-indicators">
+    
         <!-- Indicator buttons -->
 <!--These are the indicator buttons.-->
 <!-- data-bs-target attribute specifies the carousel to which the indicator is associated.data-bs-slide-to attribute specifies the index of the slide (starting from 0) that this indicator represents.The active class is applied to the first indicator button to indicate that it corresponds to the first slide.aria-current attribute is set to "true" to indicate that this is the currently selected slide to assistive technologies.aria-label attribute provides a label for the indicator button, in this case, "Slide 1".-->
@@ -171,18 +172,21 @@
             <div class="carousel-caption d-none d-md-block text-end"> <!-- Added class "text-end" for right alignment -->
             </div>
         </div>
+    </div>
 
-    <!-- Previous and Next buttons within the third slide -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" style="top: 50%; transform: translateY(-50%); left: 5px;">
+    <!-- Previous button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" style="top: 50%; transform: translateY(-50%); right: 5px;">
+
+    <!-- Next button -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-</div>
+
 <!--Previous and  Next Button works the same except for prev and next functioning-->
 <!--These button element represents the button used to navigate to the previous and next slide in the carousel.-->
 

@@ -442,3 +442,28 @@ transform-origin: center; sets the center of the element as the point around whi
 }
 
 
+/* Custom CSS for enabling swipe on carousel */
+.carousel {
+  touch-action: pan-y;
+}
+/* Additional styles for testimonial section */
+.testimonial-item {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial-item h5 {
+  color: #343a40;
+}
+.testimonial-item p {
+  font-size: 18px;
+  color: #6c757d;
+}
+.testimonial-item strong {
+  font-weight: bold;
+  color: #212529;
+}
+.rating {
+  color: #ffc107;
+}
