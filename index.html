@@ -23,7 +23,8 @@
     <script src="index.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
    
 </head>
 
@@ -58,7 +59,7 @@
         <!-- bg-light: Sets the background color of the entire header to light-->
   
         <div class="container-fluid">
-         
+
             <!--Logo-->
             <!--navbar-brand:  The navbar-brand class is used for branding logo within a navigation bar.-->
             <a class="navbar-brand" href="index.html">
@@ -462,10 +463,6 @@
     </div>
   </section>
 
-
-  
-
-
 <!--FAQ section start-->
 <section class="faq-section" style="background-color:#093252; padding: 30px;">
     <div class="container">
@@ -476,7 +473,7 @@
                     <!--Question 1-->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 <i class="fas fa-question-circle"></i>&nbsp; What courses do you offer?
                             </button>
                         </h2>
@@ -611,80 +608,75 @@
         </div>
     </div>
 </section>
-<!-- CSS Files -->
-<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/testimonials/testimonial-4/assets/css/testimonial-4.css" />
 
-<!-- Testimonial 4 - Bootstrap Brain Component -->
-<section class="py-3 py-md-5 py-xl-8">
-    <h2 class="h1 mb-3 text-center">Reviews from Students</h2>
-    <div class="container overflow-hidden">
-  
-      <div class="row gy-3 gy-lg-4">
-    
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-body p-4 p-xxl-5">
-              <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-              <blockquote class="bsb-blockquote-icon mb-3">Nam ultricies, ex lacinia dapibus faucibus, sapien ipsum euismod massa, at aliquet erat turpis quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
-              <figure class="d-flex align-items-center m-0 p-0">
-                <img class="img-fluid rounded rounded-circle m-0 border border-5" loading="lazy" src="./assets/img/testimonial-img-1.jpg" alt="">
-                <figcaption class="ms-3">
-                  <h4 class="mb-1 h5">Zuhaina</h4>
-                  <h5 class="fs-6 text-secondary mb-0">2023, Full Stack developer</h5>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+
+
+<div class="faq-reviews-container" >
+    <h2 class="h1 mb-3 text-center" style="color: #093252; font-family: Verdana; ">Reviews</h2>
+    <br>
+<!-- Swiper main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile1.jpg" alt="Student Image">
+          <span class="student-name">John Doe</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"I absolutely loved my experience at Websoft. The instructors were knowledgeable and supportive, and I feel like I learned a lot in a short amount of time."</p>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-body p-4 p-xxl-5">
-              <div class="bsb-ratings text-warning mb-3" data-bsb-star="4" data-bsb-star-off="1"></div>
-              <blockquote class="bsb-blockquote-icon mb-3">Nam ultricies, ex lacinia dapibus faucibus, sapien ipsum euismod massa, at aliquet erat turpis quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
-              <figure class="d-flex align-items-center m-0 p-0">
-                <img class="img-fluid rounded rounded-circle m-0 border border-5" loading="lazy" src="./assets/img/testimonial-img-2.jpg" alt="">
-                <figcaption class="ms-3">
-                  <h4 class="mb-1 h5">Mark Smith</h4>
-                  <h5 class="fs-6 text-secondary mb-0">2021, Web developer</h5>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile3.jpg" alt="Student Image">
+          <span class="student-name">Jane Smith</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Websoft institute provided me with a solid foundation in programming. The hands-on projects and real-world examples helped me understand complex concepts easily."</p>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-body p-4 p-xxl-5">
-              <div class="bsb-ratings text-warning mb-3" data-bsb-star="3" data-bsb-star-off="2"></div>
-              <blockquote class="bsb-blockquote-icon mb-3">Nam ultricies, ex lacinia dapibus faucibus, sapien ipsum euismod massa, at aliquet erat turpis quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
-              <figure class="d-flex align-items-center m-0 p-0">
-                <img class="img-fluid rounded rounded-circle m-0 border border-5" loading="lazy" src="./assets/img/testimonial-img-3.jpg" alt="">
-                <figcaption class="ms-3">
-                  <h4 class="mb-1 h5">Michael Wilson</h4>
-                  <h5 class="fs-6 text-secondary mb-0">2022, Software engineer</h5>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile4.jpg" alt="Student Image">
+          <span class="student-name">Michael Johnson</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Attending the websoft institute was a transformative experience for me. The instructors were engaging, the curriculum was comprehensive, and the overall learning environment was fantastic."</p>
         </div>
-        <div class="col-12 col-lg-6">
-          <div class="card">
-            <div class="card-body p-4 p-xxl-5">
-              <div class="bsb-ratings text-warning mb-3" data-bsb-star="5" data-bsb-star-off="0"></div>
-              <blockquote class="bsb-blockquote-icon mb-3">Nam ultricies, ex lacinia dapibus faucibus, sapien ipsum euismod massa, at aliquet erat turpis quis diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</blockquote>
-              <figure class="d-flex align-items-center m-0 p-0">
-                <img class="img-fluid rounded rounded-circle m-0 border border-5" loading="lazy" src="./assets/img/testimonial-img-4.jpg" alt="">
-                <figcaption class="ms-3">
-                  <h4 class="mb-1 h5">Luke Reeves</h4>
-                  <h5 class="fs-6 text-secondary mb-0">2021, Web developer</h5>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile2.jpg" alt="Student Image">
+          <span class="student-name">Emily Brown</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"I highly recommend the WebSoft institute to anyone interested in learning to code. The instructors are passionate about teaching, and the course materials are top-notch."</p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile1.jpg" alt="Student Image">
+          <span class="student-name">Alex Martinez</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Enrollingat websoft institute was one of the best decisions I've made. The support from the instructors and my peers made the learning process enjoyable, and I feel confident in my coding abilities now."</p>
+        </div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="images/profile2.jpg" alt="Student Image">
+          <span class="student-name">Sarah Thompson</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Websoft institute exceeded my expectations. The curriculum was well-structured, and the hands-on approach helped me grasp the concepts quickly. I'm grateful for the experience."</p>
         </div>
       </div>
     </div>
-  </section>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
 
     <!--Footer section start-->
     <!--`class="text-white p-3"` (These are CSS classes applied to the footer element) `text-white` sets the text color to white, and `p-3` adds padding of 3 units -->
@@ -754,7 +746,30 @@
     <!-- Feather icons -->
 <script src="https://unpkg.com/feather-icons"></script>
 <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<!-- Link Swiper's JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+<!-- Initialize Swiper -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      autoplay: {
+        delay: 5000, // 5 seconds
+        disableOnInteraction: false, // Continue autoplay even when user interacts
+      },
+      speed: 1000, // 1 second
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
 
+</script>
 </body>
-
 </html>

@@ -1,252 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Reviews</title>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- Custom CSS -->
+  <style>
+    /* Basic CSS for styling the slides */
+    .swiper-container {
+      width: 80%;
+      margin: 50px auto;
+      overflow: hidden; /* Hide the scrollbar */
+    }
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-    <title>WebSoft Institute</title>
+    .student-review {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .student-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .star-rating {
+      color: #ffc107;
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
+
+    .review-text {
+      font-size: 16px;
+    }
+
+    .student-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
-
 <body>
-    <!-- Header Start -->
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <!--Logo-->
-            <a class="navbar-brand" href="index.html">
-                <img src="https://www.websoftitservices.com/img/logo.png" alt="WebSoft Institute Logo" class="img-fluid">
-            </a>
-            <!-- Navigation Bar toggle button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--Navigation links-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item mx-4">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="about.html">About us</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="course.html">Courses</a>
-                    </li>
-                    <li class="nav-item mx-4">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <!--class 'collapse navbar-collapse' end-->
+  <!-- Swiper main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">John Doe</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"I absolutely loved my experience at the coding institute. The instructors were knowledgeable and supportive, and I feel like I learned a lot in a short amount of time."</p>
         </div>
-        <!--Container-fluid end-->
-        <!--search bar-->
-        <form class="d-flex" id="searchForm">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput" autocomplete="off">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </header>
-    <!-- Header End -->
-       
-    <!-- Carousel -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://www.itprotoday.com/sites/itprotoday.com/files/styles/article_featured_retina/public/programming%20evolution.jpg?itok=WTj9-yNz" class="d-block w-100" alt="img1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First Slide</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://spectrum.ieee.org/media-library/illustration-of-a-programmer-sitting-in-front-of-a-computer-with-boxes-that-contain-different-programming-languages-names-around.jpg?id=25587918&width=2400&height=1443" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second Slide</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://blogimages.softwaresuggest.com/blog/wp-content/uploads/2019/10/13173411/13-Software-Developer-Skills.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third Slide</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">Jane Smith</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"The coding institute provided me with a solid foundation in programming. The hands-on projects and real-world examples helped me understand complex concepts easily."</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">Michael Johnson</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Attending the coding institute was a transformative experience for me. The instructors were engaging, the curriculum was comprehensive, and the overall learning environment was fantastic."</p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">Emily Brown</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"I highly recommend the coding institute to anyone interested in learning to code. The instructors are passionate about teaching, and the course materials are top-notch."</p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">Alex Martinez</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"Enrolling in the coding institute was one of the best decisions I've made. The support from the instructors and my peers made the learning process enjoyable, and I feel confident in my coding abilities now."</p>
+        </div>
+      </div>
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <div class="student-review">
+          <img class="student-image" src="https://via.placeholder.com/80" alt="Student Image">
+          <span class="student-name">Sarah Thompson</span>
+          <div class="star-rating">★★★★★</div>
+          <p class="review-text">"The coding institute exceeded my expectations. The curriculum was well-structured, and the hands-on approach helped me grasp the concepts quickly. I'm grateful for the experience."</p>
+        </div>
+      </div>
     </div>
-    <!-- Carousel End -->
-
-    <!-- Footer -->
-    <div id="footerContainer">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h5>Contact Us</h5>
-                        <p>WebSoft Institute</p>
-                        <p>123 WebSoft Street</p>
-                        <p>City, Country</p>
-                        <p>Email: info@websoftinstitute.com</p>
-                        <p>Phone: +1234567890</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>Connect with Us</h5>
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="col-md-4">
-                        <h5>About Us</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-12 text-center">
-                        <p>&copy; 2024 WebSoft Institute. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
-
-
-
-<footer class="container text-white p-3">
-    <div class="footer-content">
-        <div class="company-address">
-            <!-- Your company address content -->
-        </div>
-        
-        <ul class="footer-links">
-            <li><a href="#" class="text-decoration-none">Website</a></li>
-            <li><a href="#" class="text-decoration-none">Social Media</a></li>
-            <li><a href="#" class="text-decoration-none">Branding</a></li>
-        </ul>
-        
-        <div class="footer-social">
-            <!-- Your social media icons -->
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-md-12 text-center pt-2">
-            <p>&copy; Copyright 2021 - All Rights Reserved. Design by <a href="#" class="text-navy">WebSoft</a></p>
-        </div>
-    </div>
-</footer>
-
-<!--Footer start-->
-<footer class="container text-white p-3" style="font-family: 'Poppins', sans-serif; background: #0f0c29; background: linear-gradient(to right,  #D6E4FF, #A9D5E5); ">
-    <div class="row justify-content-around text-center text-md-start">
-        <div class="col-md-4">
-            <h4 class="mt-2" style="text-align: center; color: navy;">Company Address</h4>
-            <p style="text-align: center; color: navy;">WEBSOFT IT SERVICES PVT. LTD. <br>
-                2nd Floor, U.R Tower, <br>
-                Near City Centre Mall, <br>
-                K.S Rao Road Mangaluru- 575001</p>
-        </div>
-        
-        <div class="col-md-4">
-            <ul class="list-unstyled text-center" style="color: navy;"> <!-- Added text-center class here -->
-                <h4 class="mt-2" style="color: navy;">Quick Links</h4>
-                <!-- <li class="fw-bold my-2">Partnership</li> -->
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Website</a></li>
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Social Media</a></li>
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Branding</a></li>
-            </ul>
-        </div>
-  
-        <div class="col-md-4">
-            <h4 class="mt-2" style="text-align: center; color: navy;">Contact Us</h4>
-            <div style="text-align: center;">
-                <a href="#" class="text-navy me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-  
-    <hr style="border-top: 1.1px solid navy;">
-  
-    <div class="row">
-        <div class="col-md-12 text-center pt-2" style="color: navy;">
-            <p>&copy; Copyright 2021 - All Rights Reserved. Design by <a href="#" class="text-navy">WebSoft</a></p>
-        </div>
-    </div>
-  </footer>
-  <!--Footer End-->
-
-
-
-
-   <!--Footer start-->
-<footer class="container-fluid text-white p-3" style="font-family: 'Poppins', sans-serif; background: #0f0c29; background: linear-gradient(to right,  #D6E4FF, #A9D5E5); ">
-    <div class="row justify-content-around text-center text-md-start">
-        <div class="col-md-4">
-            <h4 class="mt-2" style="text-align: center; color: navy;">Company Address</h4>
-            <p style="text-align: center; color: navy;">WEBSOFT IT SERVICES PVT. LTD. <br>
-                2nd Floor, U.R Tower, <br>
-                Near City Centre Mall, <br>
-                K.S Rao Road Mangaluru- 575001</p>
-            </div>
-        <div class="col-md-4">
-            <ul class="list-unstyled text-center" style="color: navy;"> <!-- Added text-center class here -->
-                <h4 class="mt-2" style="color: navy;">Quick Links</h4>
-                <!-- <li class="fw-bold my-2">Partnership</li> -->
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Website</a></li>
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Social Media</a></li>
-                <li><a href="#" class="text-decoration-none" style="color: navy;">Branding</a></li>
-            </ul>
-        </div>
-  
-        <div class="col-md-4">
-            <h4 class="mt-2" style="text-align: center; color: navy;">Contact Us</h4>
-            <div style="text-align: center;">
-                <a href="#" class="text-navy me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="text-navy me-3"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
-  
-    <hr style="border-top: 1.1px solid navy;">
-  
-    <div class="row">
-        <div class="col-md-12 text-center pt-2" style="color: navy;">
-            <p>&copy; Copyright 2021 - All Rights Reserved. Design by <a href="#" class="text-navy">WebSoft</a></p>
-        </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
-  </footer>
-  <!--Footer End-->
+
+  <!-- Link Swiper's JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Initialize Swiper -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+          delay: 5000, // 5 seconds
+          disableOnInteraction: false, // Continue autoplay even when user interacts
+        },
+        speed: 1000, // 1 second
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    });
+  </script>
+</body>
+</html>

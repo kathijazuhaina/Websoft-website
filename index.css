@@ -408,7 +408,7 @@ transform-origin: center; sets the center of the element as the point around whi
 }
 
 .background{
-  background: linear-gradient(to right, #D6E4FF, #A9D5E5);;
+  background: linear-gradient(to right, #D6E4FF, #A9D5E5);
 }
 
 /* Styling the FAQ section */
@@ -467,3 +467,61 @@ transform-origin: center; sets the center of the element as the point around whi
 .rating {
   color: #ffc107;
 }
+
+.swiper-container {
+  width: 80%;
+  margin: 50px auto;
+  overflow: hidden; /* Hide the scrollbar */
+  margin-top: 0; /* Adjust margin top */
+  margin-bottom:0px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.student-review {
+  padding: 20px;
+  background-color:#093252;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  color:  #A9D5E5;
+}
+
+.student-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.star-rating {
+  color: #ffc107;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.review-text {
+  font-size: 16px;
+}
+
+.student-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
+/* Adjust padding of the parent container */
+.faq-reviews-container {
+  background-color: white;
+  padding-top: 50px; /* Adjust padding top */
+  padding-bottom: 50px; /* Adjust padding bottom */
+}
+
+
+
