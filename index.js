@@ -1,8 +1,4 @@
-//This event listener ensures that the JavaScript code inside it will execute only after the HTML content of the 
-//page has been fully loaded and parsed.
 document.addEventListener('DOMContentLoaded', function () {
-
-
 
     //This is an array of objects representing different courses, where each object contains the name of
     // the course and its corresponding URL.
@@ -87,15 +83,23 @@ document.addEventListener('DOMContentLoaded', function () {
         // Remove the tilt-effect class when mouse is out of the logo
         logo.classList.remove('tilt-effect');
     });
+
+    // Swiper Carousel Initialization
+    var swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 2000, // 5 seconds
+            disableOnInteraction: false, // Continue autoplay even when user interacts
+        },
+        speed: 1000, // 1 second
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
 });
-
-
-
-
-
-
-
-
-
-  
- 
