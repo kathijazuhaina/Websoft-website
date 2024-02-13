@@ -1,0 +1,49 @@
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Course dropdown styles */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Content container styles */
+.container.mt-5 {
+    margin-top: 3rem; /* Adjust the top margin as needed */
+}
+
+
+/* Carousel styles */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Content styles */
+.content {
+    padding: 5px;
+    text-align: left;
+   
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .align-items-center {
+        flex-wrap: nowrap; /* Prevent items from wrapping */
+    }
+
+    .col-md-6 {
+        flex: 0 0 50%; /* Make columns occupy 50% of the row */
+        max-width: 50%;
+    }
+}
+
